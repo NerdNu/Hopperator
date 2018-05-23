@@ -1,0 +1,17 @@
+name: Hopperator
+main: nu.nerd.hopperator.Hopperator
+description: Detect hoppers causing lag
+version: ${project.version}
+
+
+commands:
+  hopperator:
+    usage: /hopperator [subcommand]
+    description: Detect hoppers causing lag
+    permission: hopperator.commands
+    permission-message: You don't have permission to do that.
+
+
+permissions:
+  hopperator.commands:
+    description: Hopperator commands
