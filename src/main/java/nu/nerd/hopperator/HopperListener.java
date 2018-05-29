@@ -4,6 +4,7 @@ package nu.nerd.hopperator;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryMoveItemEvent;
 import org.bukkit.event.inventory.InventoryType;
@@ -20,7 +21,7 @@ public class HopperListener implements Listener {
     }
 
 
-    @EventHandler(ignoreCancelled = true)
+    @EventHandler(priority = EventPriority.MONITOR, ignoreCancelled = false)
     public void onItemMove(InventoryMoveItemEvent event) {
         if (event.getInitiator().getType().equals(InventoryType.HOPPER)) {
             if (!plugin.getListenerFlag(event.getInitiator().getLocation().getWorld())) return;
