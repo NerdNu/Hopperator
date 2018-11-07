@@ -75,7 +75,7 @@ public class CommandHandler implements CommandExecutor {
             }
 
             else if (args[0].equalsIgnoreCase("tp")) {
-                if (args.length < 2 || args[1].length() < 1 || args[2].length() < 1) {
+                if (args.length < 3 || args[1].length() < 1 || args[2].length() < 1) {
                     sender.sendMessage(ChatColor.RED + "Usage: /hopperator tp <x> <z>");
                     return true;
                 }
